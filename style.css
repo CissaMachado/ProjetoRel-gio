@@ -96,9 +96,22 @@ body {
     --rotation: 330deg;
 }
 
+.clock::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: black;
+    transform: translate(-50%, -50%);
+}
+
 /*ponteiros*/
 .clock .hand {
-    --rotation:0;
+    --rotation: 0;
 
     position: absolute;
     bottom: 50%;
@@ -110,17 +123,20 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.clock .hand.second{
+
+.clock .hand.second {
     width: 3px;
     height: 40%;
     background-color: #a51742;
 }
-.clock .hand.minutes{
+
+.clock .hand.minutes {
     width: 5px;
     height: 35%;
     background-color: #e26426;
 }
-.clock .hand.hours{
+
+.clock .hand.hours {
     width: 7px;
     height: 25%;
     background-color: black;
